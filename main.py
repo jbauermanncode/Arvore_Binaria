@@ -3,7 +3,7 @@ from arvore_binaria import Arvore
 arvore = Arvore()
 
 tipo_ordem = [arvore.pre_ordem, arvore.em_ordem, arvore.pos_ordem]
-ordem = tipo_ordem[int(input('Escolha a ordem que você deseja imprimir a árvore: '))]
+ordem = tipo_ordem[int(input('Escolha a ordem que você deseja imprimir a árvore: \nPré Ordem [0]\nEm Ordem  [1]\nPós Ordem [2]:'))]
 
 if (ordem == arvore.pre_ordem):
     ordem_escolhida = 'Pré Ordem'
@@ -42,12 +42,12 @@ print('--'*20+'\n')
 buscar = input('Deseja fazer busca de elemento?(S/N) ')
 while(buscar == 'S'): 
     print('--'*20+'\n')
-    arvore.buscar(int(input('Buscar elemento: ')))
+    arvore.buscar(int(input('Buscar chave: ')))
     print('--'*20+'\n')
     print(f'Imprime a árvore em {ordem_escolhida}')
     ordem(arvore.get_raiz())
     print('--'*20+'\n')
-    buscar = input('Deseja fazer busca por novo elemento?(S/N) ')
+    buscar = input('Deseja fazer busca por nova chave?(S/N) ')
 else:
     print('--'*20+'\n')
     print(f'Imprime a árvore em {ordem_escolhida}')
